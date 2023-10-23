@@ -1,0 +1,12 @@
+package com.EMS.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+@EMPController
+public class EMPController {
+	
+	@GetMapping("/")
+	public String home() {
+		return "index";
+	}
+}

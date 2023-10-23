@@ -1,0 +1,17 @@
+package com.EMS.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.EMS.entity.Employee;
+import com.EMS.repository.EMPRepository;
+
+public class EMPService {
+	
+	@Autowired
+	private EMPRepository repo;
+	
+	public void addEMP(Employee e) {
+		repo.save(e);
+	}
+
+}

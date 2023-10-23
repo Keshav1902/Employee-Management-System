@@ -1,0 +1,19 @@
+package com.EMS.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.EMS.entity.Employee;
+import com.EMS.repository.EMPRepository;
+
+@Service
+public class EMPService {
+
+	@Autowired
+	private EMPRepository repo;
+
+	public void addEMP(Employee e) {
+		repo.save(e);
+	}
+
+}
